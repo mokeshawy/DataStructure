@@ -16,12 +16,12 @@ public class Main {
 
         System.out.println("Simple Array :");
         for( int i = 0;  i<number.length; i++){
-            System.out.println(number[i]);
+            System.out.print(number[i] + "\t");
         }
 
 
         // Array of Object.
-        System.out.println("Array of Object :");
+        System.out.println("\n Array of Object :");
         Students[] stu = new Students[3];
         stu[0] = new Students("Mohamed" , 1);
         stu[1] = new Students("Keshawy" , 3);
@@ -31,6 +31,28 @@ public class Main {
             System.out.println(students.name + ":"+ students.id);
         }
 
+
+        // Tow dimension
+        System.out.println("\n Tow dimension Array :");
+        int[][] data = new int[3][3];
+
+        data[0][0] = 1;
+        data[0][1] = 3;
+        data[0][2] = 5;
+        data[1][0] = 9;
+        data[1][1] = 13;
+        data[1][2] = 16;
+        data[2][0] = 18;
+        data[2][1] = 20;
+        data[2][2] = 4;
+
+        for (int i =0; i<3; i++){
+            for (int j =0; j<3; j++){
+
+                System.out.print(data[i][j] + "\t");
+            }
+            System.out.println("\n");
+        }
     }
 
     // class for students.
@@ -45,7 +67,6 @@ public class Main {
             this.id = id;
         }
     }
-
 
 }
 
