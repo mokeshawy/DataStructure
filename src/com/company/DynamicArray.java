@@ -2,14 +2,14 @@ package com.company;
 
 import java.util.Arrays;
 
-public class DynamicArray {
+public class DynamicArray <T>{
 
-    int[] data;
+    Object[] data;
     int size;
 
     public static void main(String[] args){
 
-        DynamicArray dArray = new DynamicArray();
+        DynamicArray<Integer> dArray = new DynamicArray<Integer>();
 
         dArray.putElement(4);
         System.out.println("Size :" + dArray.getSize());
@@ -22,7 +22,7 @@ public class DynamicArray {
 
     public DynamicArray(){
         size = 0;
-        data = new int[1];
+        data = new Object[1];
     }
 
     // get size for array.
@@ -31,8 +31,8 @@ public class DynamicArray {
     }
 
     // get element fro array.
-    public int getElement( int index){
-        return data[index];
+    public T getElement( int index){
+        return (T) data[index];
     }
 
     // insert element to array.
@@ -56,5 +56,4 @@ public class DynamicArray {
             data = Arrays.copyOf(data , newCapacity);
         }
     }
-
 }
