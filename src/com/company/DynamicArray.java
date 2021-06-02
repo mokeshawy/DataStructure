@@ -7,6 +7,8 @@ public class DynamicArray <T>{
     Object[] data;
     int size;
 
+
+
     public static void main(String[] args){
 
         DynamicArray<Integer> dArray = new DynamicArray<Integer>();
@@ -30,8 +32,9 @@ public class DynamicArray <T>{
         return data.length;
     }
 
-    // get element fro array.
+    // get element from array.
     public T getElement( int index){
+
         return (T) data[index];
     }
 
