@@ -1,6 +1,6 @@
-package com.company;
+package com.company.simplearray;
 
-public class Main {
+public class SimpleArrayDemo {
 
     public static void main(String[] args) {
 	// write your code here
@@ -54,20 +54,6 @@ public class Main {
             System.out.println("\n");
         }
     }
-
-    // class for students.
-    public static class Students{
-
-        String name;
-        int id;
-
-        public Students( String name , int id ){
-
-            this.name = name;
-            this.id = id;
-        }
-    }
-
 }
 
 
