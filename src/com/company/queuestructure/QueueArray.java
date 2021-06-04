@@ -24,12 +24,26 @@ public class QueueArray<T> {
 
     public void queue( Object newItem){ // insert item.
 
-        if(isFull()) return;
+        if(isFull()) {
+            System.out.println("Queue is full !");
+            return;
+        }
         rear +=1;
         ArrayQueue[rear] = newItem;
 
         if(front == -1){ // only execute one time.
-            front = 1;
+            front = 0;
         }
+    }
+
+    public T dQueue(){
+
+        if(isEmpty()){
+            System.out.println("Queue is empty !");
+            return null;
+        }
+         T objectOut = (T) ArrayQueue[front];
+         front +=1;
+         return objectOut;
     }
 }
