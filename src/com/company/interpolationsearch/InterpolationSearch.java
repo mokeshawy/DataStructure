@@ -1,9 +1,8 @@
-package com.company.binarysearch;
+package com.company.interpolationsearch;
 
-public class BinarySearch {
+public class InterpolationSearch {
 
     public static void main(String[] args) {
-
 
         int size = 1000000;
         int[] array = new int[size]; //==> C0
@@ -26,7 +25,7 @@ public class BinarySearch {
                 System.out.println("Number is not Found");
                 break;
             }
-            mid = low + ((height-low) / 2);
+            mid = low + ((height - low) / (array[height] - array[low] ) ) * (numberSearch - array[low]) ;
 
             numberOfTray++;
             if(array[mid] == numberSearch){
@@ -41,5 +40,6 @@ public class BinarySearch {
                 height = mid -1;
             }
         }
+
     }
 }
